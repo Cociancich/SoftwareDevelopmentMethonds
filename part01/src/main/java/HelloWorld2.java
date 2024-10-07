@@ -1,6 +1,6 @@
 public class HelloWorld2 {
     public static void main(String[] args){
-        String names = "";
+        StringBuilder names = new StringBuilder();
         for(int i = 0; i < args.length; i++){
             String sep;
             if (i!= args.length-1){
@@ -9,7 +9,7 @@ public class HelloWorld2 {
             else {
                 sep = " and ";
             }
-            names = names + sep + args[i];
+            names.append(sep).append(args[i]);
         }
         System.out.println("Hello" + names + "!");
     }
